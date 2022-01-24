@@ -77,9 +77,7 @@ void setupWifi() {
   WiFi.on();
   WiFi.disconnect();
   WiFi.clearCredentials();
-  //WiFi.setCredentials("Simplex_Study", "S6a6a0rtje!", WPA2, WLAN_CIPHER_AES);
-  //WiFi.setCredentials("Simplex", "S6a6a0rtje!", WPA2, WLAN_CIPHER_AES);
-  WiFi.setCredentials("Venturion", "B6r6i0stol!", WPA2, WLAN_CIPHER_AES);
+  WiFi.setCredentials("network-id", "password", WPA2, WLAN_CIPHER_AES);
   WiFi.connect();
   waitUntil(WiFi.ready);
   Particle.connect();
