@@ -16,6 +16,6 @@ The "homeostat" class is provided for automatic control of a device (heater and 
 
 The environment variables of temperature and humidity is collected from the cloud by subscribing to the events published by another particle photon in the environment. I chose for this option as the control device is in an instrument cabinet, and the environment readings from a sensor in this location wouldn't properly reflect the actual environment. 
 
-The connected virtual blynk pins are self-evident from the code, these are arbitrary and can be customized.
+The connected virtual blynk pins are self-evident from the code, these are arbitrary and can be customized. The virtual pin V16 is used to keep track of the last reset time. I included a reset function as the photon would act up from time to time, it would stay connected to blynk cloud but would appear offline in the particle cloud, so it wasn't possible to flash new code. So if this happens, I reset through blynk and flash the new code.
 
 Please note that you need to provide your blynk authentication token, and wi-fi credentials in the relevant places in the code.
