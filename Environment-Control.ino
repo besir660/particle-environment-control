@@ -160,9 +160,9 @@ void EnvironmentControl()
 
 int subscriptionHandler(const char *event, const char *data) {
 	Serial.printlnf("subscriptionHandler event=%s data=%s", event, data);
-	if ( strcmp(event, "Venturion_1_Temperature") == 0){
+	if ( strcmp(event, "Temperature") == 0){
 	    return TemperatureEventHandler(data);
-	} else if ( strcmp(event, "Venturion_1_Humidity") == 0){
+	} else if ( strcmp(event, "Humidity") == 0){
 	    return HumidityEventHandler(data);
 	}
 	return 0;
@@ -215,7 +215,7 @@ BLYNK_WRITE(V22) //selection for heater/dehumidifer
 
 BLYNK_WRITE(V0) //target slider
 {
-  double pinValue = param.asDouble(); // assigning incoming value from pin V1 to a variable
+  double pinValue = param.asDouble(); // assigning incoming value from pin V0 to a variable
   if (menu_selection ==1)
   {
     Thermostat.Target(pinValue);  
