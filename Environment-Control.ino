@@ -26,7 +26,7 @@ int menu_selection = 1 ;
 
 //BLYNK Tokens:
 //be careful to have the correct Blynk token for device before flash to prevent multiple devices updating the same stream
-char auth[] = "your-token";
+char auth[] = "your-blynk-token";
 
 float Temperature= 20.0;
 float Humidity= 0.0;
